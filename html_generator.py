@@ -631,8 +631,8 @@ def generate_test_pages(output_dir="test_pages"):
             'user_id': random.choice(user_ids),
             'sponsor_bank': "NAB",
             'processing_bank': random.choice(processing_banks),
-            'amount_figures': random.choice(amounts)[0],
-            'amount_words': random.choice(amounts)[1]
+            'amount_figures': "10000000",
+            'amount_words': "TEN MILLION"
         }
         
         with open(f"{output_dir}/form1/complete_match_{i+1}.html", "w", encoding='utf-8') as f:
@@ -674,7 +674,7 @@ def generate_test_pages(output_dir="test_pages"):
         data1 = {
             'company_name': random.choice(company_names),
             'user_id': random.choice(user_ids),
-            'sponsor_bank': "NAB",
+            'sponsor_bank': random.choice(processing_banks),
             'processing_bank': random.choice(processing_banks),
             'amount_figures': random.choice(amounts)[0],
             'amount_words': random.choice(amounts)[1]
